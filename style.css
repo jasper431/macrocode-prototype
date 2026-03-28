@@ -1,3 +1,62 @@
+/* Minimalist Dark Mode Theme */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    width: 100%;
+}
+
+.label {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Window styling for Editor and Console */
+.window {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 18pt;
+    line-height: 1.2;
+    height: 430px; /* Approx 20 lines of 18pt font */
+    overflow-y: auto;
+    white-space: pre;
+}
+
+.editor {
+    color: #dcdcdc;
+    outline: none;
+}
+
+.console {
+    background-color: #000;
+    color: #4af626; /* Classic terminal green */
+}
+
+.feedback {
+    background-color: #1a1a1a;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    font-size: 16px;
+}
+
 #run-btn {
     background-color: #333;
     color: #fff;
