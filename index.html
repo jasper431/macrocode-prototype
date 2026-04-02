@@ -7,50 +7,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
 </head>
 <body>
     <div class="container">
         <header class="section">
-            <img id="logo" src="macrocode_logo.png" style="max-width: 400px;"/>
+            <img id="logo" src="macrocode_logo.png" alt="macroCode">
             <div class="header-content">
-                <h1>Lesson 1: Introduction</h1>
-                <p>Write a Python script to print a greeting, then click "Run Code".</p>
+                <h1 id="unit-title">Loading Unit...</h1>
+                <p id="unit-goal">Please wait while the lesson initializes.</p>
             </div>
         
             <div class="button-group">
                 <button id="run-btn" class="primary-btn">Run Code</button>
+                
                 <div class="help-wrapper">
                     <button class="secondary-btn">Lexicon</button>
-                    <div class="hover-pane"><strong>Lexicon</strong> print  # all lowercase </div>
+                    <div id="lexicon-hover" class="hover-pane">Loading...</div>
                 </div>
+            
                 <div class="help-wrapper">
                     <button class="secondary-btn">Syntax</button>
-                    <div class="hover-pane"><strong>Syntax:</strong> print('message in quotes')</div>
+                    <div id="syntax-hover" class="hover-pane">Loading...</div>
                 </div>
+
                 <div class="help-wrapper">
                     <button class="secondary-btn">Example</button>
-                    <div class="hover-pane"><code>print("Hi, Welcome to macroCode.dev!")</code></div>
+                    <div id="example-hover" class="hover-pane">Loading...</div>
                 </div>
             </div>
         </header>
 
-        <section class="section">
-            <div class="label">Editor</div>
-            <div id="editor" class="window editor" contenteditable="true"># Write your code here...
-print("Hello from the editor!")</div>
-        </section>
+        <main id="main-content">
+            <div id="fluency-zone" style="display: none;">
+                <div class="label">Fluency Drill</div>
+                <div class="window fluency-card">
+                    <h2 id="drill-question">Question goes here</h2>
+                    <input type="text" id="drill-answer" placeholder="Type answer here...">
+                </div>
+            </div>
 
-        <section class="section">
-            <div class="label">Console</div>
-            <div id="console" class="window console">>>> Press run to execute...</div>
-        </section>
+            <div id="editor-zone">
+                <section class="section">
+                    <div class="label">Editor</div>
+                    <div id="editor" class="window editor" contenteditable="true"># Loading...</div>
+                </section>
+
+                <section class="section" style="margin-top: 20px;">
+                    <div class="label">Console</div>
+                    <div id="console" class="window console">>>> Press run to execute...</div>
+                </section>
+            </div>
+        </main>
 
         <footer class="section feedback">
             <span id="feedback-text"><strong>System Feedback:</strong> Awaiting execution...</span>
         </footer>
-    </div> <script src="script2.js"></script>
+    </div>
+
+    <script src="script2.js"></script>
 </body>
 </html>
